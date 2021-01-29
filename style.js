@@ -30,7 +30,12 @@ depositBtn.addEventListener("click", function(params) {
 const withdrawbtn = document.getElementById("addWithdraw");
 withdrawbtn.addEventListener("click", function() {
    const withdrawNumber = getinputNumber("withdrawAmount");
-   console.log(withdrawNumber);
+
+   updateSpanText("currentWithdraw", withdrawNumber)
+   updateSpanText("currentBalance", -1 * withdrawNumber)
+   
+   // console.log("withdrawNumber", withdrawNumber);
+   document.getElementById("withdrawAmount").value = "";
 })
 
 
